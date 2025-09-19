@@ -1,0 +1,20 @@
+LOVE2D Documentation https://love2d.org/wiki/Main_Page
+Week 0 Repo - https://github.com/games50/pong
+
+
+Love2D Syntax
+
+love.load()
+- Initializes our game state at the beginning of our program.
+
+love.update(dt)
+- This is called each frame by Love, dt is the elapsed time in seconds between frames, so we can use this to provide consistent function regardless of frame rate.
+
+love.draw()
+- Used to render visuals within love, or draw things on the screen as elements are changed or updated. 
+
+love.graphics.printf(text, x, y, [width], [align])
+- versatile print function that can align text on the screen
+
+love.window.setMode(width, height, params)
+- 
