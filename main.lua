@@ -12,7 +12,7 @@ VIRTUAL_HEIGHT = 243
 function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
 
-    smallfont = love.graphics.newFont('libs.font.ttf', 8)
+    smallFont = love.graphics.newFont('libs/font.ttf', 8)
 
     love.graphics.setFont(smallFont)
 
@@ -35,26 +35,9 @@ function love.draw()
 
     love.graphics.clear(40/255, 45/255, 52/255, 255/255)
 
-    
+
     love.graphics.printf("Cute Pong :3", 0, VIRTUAL_HEIGHT / 2 - 6, VIRTUAL_WIDTH, 'center')
     love.graphics.printf("Pong?!", 0, VIRTUAL_HEIGHT / 2 - 30, VIRTUAL_WIDTH - 100, 'center')
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     push:apply('end')
 end
 
