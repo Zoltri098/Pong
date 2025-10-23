@@ -1,22 +1,12 @@
- 
- push = require 'libs.push'
 
+
+-- Defining the resolution of the game window.
 
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
 
-VIRTUAL_WIDTH = 432
-VIRTUAL_HEIGHT = 243
-
-
 function love.load()
-    love.graphics.setDefaultFilter('nearest', 'nearest')
-
-    smallFont = love.graphics.newFont('libs/font.ttf', 8)
-
-    love.graphics.setFont(smallFont)
-
-    push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT,{
+    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
         resizable = false,
         vsync = true
@@ -24,20 +14,21 @@ function love.load()
 end
 
 function love.keypressed(key)
-    if key == 'z' then
+    if key == 'x' then
         love.event.quit()
     end
 end
 
+--function love.update(dt)
+
+--end
+
 function love.draw()
-    push:apply('start')
-
-
-    love.graphics.clear(40/255, 45/255, 52/255, 255/255)
-
-
-    love.graphics.printf("Cute Pong :3", 0, VIRTUAL_HEIGHT / 2 - 6, VIRTUAL_WIDTH, 'center')
-    love.graphics.printf("Pong?!", 0, VIRTUAL_HEIGHT / 2 - 30, VIRTUAL_WIDTH - 100, 'center')
-    push:apply('end')
+    love.graphics.printf(
+        'hello Pong!',
+        0,
+        WINDOW_HEIGHT / 2 - 6,
+        WINDOW_WIDTH,
+        'center')
 end
 
