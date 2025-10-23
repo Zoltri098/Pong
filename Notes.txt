@@ -2,19 +2,20 @@ LOVE2D Documentation https://love2d.org/wiki/Main_Page
 Week 0 Repo - https://github.com/games50/pong
 
 
-Love2D Syntax
+---- Update 01 Notes ----
 
-love.load()
-- Initializes our game state at the beginning of our program.
+Idk how Github works yet, I assume this isn't really required, and there's somewhere on that site to document notes, but until then.. This will work. c:  
 
-love.update(dt)
-- This is called each frame by Love, dt is the elapsed time in seconds between frames, so we can use this to provide consistent function regardless of frame rate.
+This project is mainly following the Harvard CSGD50 course. I'm trying to watch the lecture, write notes, and then only impliment things using the notes I took. I don't feel just copying the code written word for word is really a good 
+learning stratagy, so adding a bit of friction hopefully helps improve the process. 
 
-love.draw()
-- Used to render visuals within love, or draw things on the screen as elements are changed or updated. 
+The main issues I ran into doing the original version of this code was... 
 
-love.graphics.printf(text, x, y, [width], [align])
-- versatile print function that can align text on the screen
+    For different functions, its important to remember the order of arguments is important (duh) 
+    I input the Width/Height Consts for printf without thinking about it, and it ended up with the text appearing in the wrong place, and it became really confusing to understand why it wasn't working. 
 
-love.window.setMode(width, height, params)
-- 
+    Also, all functions in Lua need to end with an 'end' statement. a lot of my debugging just came down to me missing an 'end' somewhere.
+
+I think when this project is 'finished' I want to branch it into a side project where I try to make something a little different, just to test I understand how to actually build something, and not just follow instructions. Like making a Pong 2.0. 
+
+
