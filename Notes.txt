@@ -19,3 +19,5 @@ The main issues I ran into doing the original version of this code was...
 I think when this project is 'finished' I want to branch it into a side project where I try to make something a little different, just to test I understand how to actually build something, and not just follow instructions. Like making a Pong 2.0. 
 
 
+--- Update 02 Notes ---
+

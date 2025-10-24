@@ -1,12 +1,19 @@
 
 
--- Defining the resolution of the game window.
 
+-- How we call a library in Lua
+push = require'libs.push'
+
+-- Defining the resolution of the game window.
 WINDOW_WIDTH = 1280
 WINDOW_HEIGHT = 720
 
+-- Defines a virtual resolution to help with a more Retro look
+VIRTUAL_WIDTH = 432
+VIRTUAL_HEIGHT = 243
+
 function love.load()
-    love.window.setMode(WINDOW_WIDTH, WINDOW_HEIGHT, {
+    push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
         resizable = false,
         vsync = true
@@ -24,11 +31,15 @@ end
 --end
 
 function love.draw()
-    love.graphics.printf(
-        'hello Pong!',
-        0,
-        WINDOW_HEIGHT / 2 - 6,
-        WINDOW_WIDTH,
-        'center')
+    push:apply('start')
+
+        love.graphics.printf(
+            'hello Pong!',
+            0,
+            VIRTUAL_HEIGHT / 2 - 6,
+            VIRTUAL_WIDTH,
+            'center')
+
+    push:apply('end')
 end
 
