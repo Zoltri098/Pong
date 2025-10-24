@@ -21,3 +21,11 @@ I think when this project is 'finished' I want to branch it into a side project 
 
 --- Update 02 Notes ---
 
+Not much to say with this one, the biggest thing was just pathing for using require.
+push = require'libs.push'
+
+I was trying to use a / for pathing, but it wasn't working. (Shamelessly GPT'd that solution.) 
+Everything else in this update was pretty simple though, nothing major.
+
+
+--- Update 03 Notes ---
